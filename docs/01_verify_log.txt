@@ -1,0 +1,45 @@
+V1 table-vs-detail max abs diff: acc 9.90960785651751e-17 wl 9.020562075079397e-17 mod 1.1102230246251565e-16 infeas 1.3877787807814457e-16 regret 4.440892098500626e-16 n 0
+V1 macro:
+ model
+LinearRegression    76.4
+MLP                 33.1
+RandomForest         8.0
+SVR                 39.5
+XGBoost             39.0
+V1 micro:
+ model
+LinearRegression    61.0
+MLP                 18.9
+RandomForest         5.6
+SVR                 20.8
+XGBoost             38.0
+V1 RF VDF infeasible rate: [0.83055247]
+V4 rho(R2,decision acc) n=40: 0.116 p=0.476
+V4 expB mean R2: {'RandomForest': np.float64(-0.12), 'LinearRegression': np.float64(-4.89), 'XGBoost': np.float64(-0.38), 'SVR': np.float64(-3.94), 'MLP': np.float64(-5181.66)}
+V2 pred rows 62598 envs 10433
+V2 rows compared 20866 re-derived ML choice == saved Phase 2B.1 choice: 1.0 true config agree: 1.0
+                  mean   size
+model                        
+LinearRegression   1.0  10433
+RandomForest       1.0  10433
+Series([], )
+V3 saved rank-corr means:
+ model
+LinearRegression    0.848
+RandomForest        0.570
+model
+LinearRegression    0.852
+RandomForest        0.138
+V3 recompute vs saved: max abs diff 1.1102230246251565e-16 NaN agree 1.0
+V3 share NaN (degenerate): model
+LinearRegression    0.285
+RandomForest        0.286
+V5 margin-stratified decision accuracy (%):
+ bucket            small  medium  large
+model                                 
+LinearRegression   52.7    51.0   80.4
+MLP                 9.9    14.8   29.6
+RandomForest        4.8     6.7    2.5
+SVR                13.8    15.0   33.7
+XGBoost            50.8    33.8   48.4
+V5 share of envs:  {'contested': 0.73, 'infeasible': 0.237, 'uncontested': 0.033}

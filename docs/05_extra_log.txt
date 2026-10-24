@@ -1,0 +1,58 @@
+true-config distribution by regime:
+ true                           (1250, 16)  (1550, 16)  (1550, 4)  (850, 16)
+regime                                                                     
+Clear (V>50km)                          0        1019          0          0
+Dense Fog (0.5-1km)                     0         344        297          0
+Rain: Heavy (>7.6 mm/h)                 0        2028       2323          0
+Rain: Light (<2.5 mm/h)                 0         300          0          0
+Rain: Moderate (2.5-7.6 mm/h)           0         300          0          0
+Very Dense Fog (<0.5km)                 1        1055       1635          6
+Visibility Regime 1 (6-50km)            0         635          0          0
+Visibility Regime 2 (1-6km)             0         490          0          0
+rule_B_case by regime:
+ case                           0_infeasible  1_single_wavelength_feasible  2_bitrate_determined  3_margin_determined
+regime                                                                                                              
+Clear (V>50km)                            0                             0                     0                 1019
+Dense Fog (0.5-1km)                      39                            20                    41                  541
+Rain: Heavy (>7.6 mm/h)                1430                            92                    80                 2749
+Rain: Light (<2.5 mm/h)                   0                             0                     0                  300
+Rain: Moderate (2.5-7.6 mm/h)             0                             0                     0                  300
+Very Dense Fog (<0.5km)                1006                            61                    49                 1581
+Visibility Regime 1 (6-50km)              0                             0                     0                  635
+Visibility Regime 2 (1-6km)               0                             0                     0                  490
+CONSTANT-(1550, 16) baseline strict acc by regime (%):
+ regime
+Clear (V>50km)                   100.0
+Dense Fog (0.5-1km)               53.7
+Rain: Heavy (>7.6 mm/h)           46.6
+Rain: Light (<2.5 mm/h)          100.0
+Rain: Moderate (2.5-7.6 mm/h)    100.0
+Very Dense Fog (<0.5km)           39.1
+Visibility Regime 1 (6-50km)     100.0
+Visibility Regime 2 (1-6km)      100.0 
+ macro 79.9 micro 59.1
+CONSTANT-(1550, 4) baseline strict acc by regime (%):
+ regime
+Clear (V>50km)                    0.0
+Dense Fog (0.5-1km)              46.3
+Rain: Heavy (>7.6 mm/h)          53.4
+Rain: Light (<2.5 mm/h)           0.0
+Rain: Moderate (2.5-7.6 mm/h)     0.0
+Very Dense Fog (<0.5km)          60.6
+Visibility Regime 1 (6-50km)      0.0
+Visibility Regime 2 (1-6km)       0.0 
+ macro 20.0 micro 40.8
+non-degenerate 3 regimes x 5 models (n=15): rho(R2,strict)= SignificanceResult(statistic=np.float64(0.2571428571428571), pvalue=np.float64(0.3548603636506092)) rho(R2,equiv)= SignificanceResult(statistic=np.float64(0.5392857142857141), pvalue=np.float64(0.03802165626355803))
+R2 in degenerate regimes (n=5 regimes x5):
+ model                          LinearRegression     MLP  RandomForest     SVR  XGBoost
+regime                                                                                
+Clear (V>50km)                            0.000   0.000         0.000   0.000    0.000
+Rain: Light (<2.5 mm/h)                  -6.478   0.657         0.522   0.261    0.059
+Rain: Moderate (2.5-7.6 mm/h)             0.154   0.806         0.925   0.396    0.676
+Visibility Regime 1 (6-50km)              0.000   0.000         0.000   0.000    0.000
+Visibility Regime 2 (1-6km)             -27.478 -13.711        -0.090 -29.966   -1.550
+model                    LinearRegression       MLP  RandomForest   SVR  XGBoost
+regime                                                                          
+Dense Fog (0.5-1km)                  0.26      0.12          0.43 -0.08     0.51
+Rain: Heavy (>7.6 mm/h)             -3.61 -41439.31         -1.31 -0.04    -1.32
+Very Dense Fog (<0.5km)             -1.93     -1.88         -1.44 -2.11    -1.46

@@ -1,0 +1,13 @@
+envs 10405
+                               oracle_ok  const16  RandomForest_ok  LinearRegression_ok  RandomForest_eq  LinearRegression_eq
+regime                                                                                                                       
+Clear (V>50km)                       0.0    100.0              0.5                100.0            100.0                100.0
+Dense Fog (0.5-1km)                 52.7     53.7             54.9                 70.8             73.9                 70.8
+Rain: Heavy (>7.6 mm/h)             67.7     46.9              0.9                 54.6             21.2                 54.6
+Rain: Light (<2.5 mm/h)              0.0    100.0              0.0                100.0             94.3                100.0
+Rain: Moderate (2.5-7.6 mm/h)        1.7    100.0             10.7                100.0             99.0                100.0
+Very Dense Fog (<0.5km)             73.6     39.1              8.7                 39.1             14.9                 39.1
+Visibility Regime 1 (6-50km)         0.0    100.0              0.0                 79.2            100.0                 79.2
+Visibility Regime 2 (1-6km)          0.0    100.0              0.0                 66.9             98.2                 66.9
+MACRO {'oracle_ok': 24.5, 'const16': 80.0, 'RandomForest_ok': 9.5, 'LinearRegression_ok': 76.3, 'RandomForest_eq': 75.2, 'LinearRegression_eq': 76.3}
+MICRO {'oracle_ok': 50.5, 'const16': 59.3, 'RandomForest_ok': 6.4, 'LinearRegression_ok': 60.7, 'RandomForest_eq': 43.3, 'LinearRegression_eq': 60.7}

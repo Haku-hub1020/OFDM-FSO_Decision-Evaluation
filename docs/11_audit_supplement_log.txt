@@ -1,0 +1,19 @@
+(a) clipped-truth replay, fixed order 850-first (as in Rule B): macro 24.0 micro 49.8
+    same replay, tie-break reversed (1550-first):             macro 100.0 micro 99.9
+(b) training-majority label in each LOWCO fold:
+   held-out Clear (V>50km)           -> (1550, 16) 5152 vs next (1550, 4) 4255
+   held-out Dense Fog (0.5-1km)      -> (1550, 16) 5827 vs next (1550, 4) 3958
+   held-out Rain: Heavy (>7.6 mm/h)  -> (1550, 16) 4143 vs next (1550, 4) 1932
+   held-out Rain: Light (<2.5 mm/h)  -> (1550, 16) 5871 vs next (1550, 4) 4255
+   held-out Rain: Moderate (2.5-7.6  -> (1550, 16) 5871 vs next (1550, 4) 4255
+   held-out Very Dense Fog (<0.5km)  -> (1550, 16) 5116 vs next (1550, 4) 2620
+   held-out Visibility Regime 1 (6-5 -> (1550, 16) 5536 vs next (1550, 4) 4255
+   held-out Visibility Regime 2 (1-6 -> (1550, 16) 5681 vs next (1550, 4) 4255
+(c) paired env-level bootstrap (2000 resamples) of strict-accuracy difference vs constant (1550,16), within regime:
+   LinearRegression  Rain: Heavy (>7.6 mm/h n= 4351 diff=   8.6 pp  95% CI [   6.1,   11.1]
+   LinearRegression  Very Dense Fog (<0.5km n= 2697 diff=   0.0 pp  95% CI [   0.0,    0.0]
+   LinearRegression  Dense Fog (0.5-1km)    n=  641 diff=  17.0 pp  95% CI [  10.1,   23.9]
+   DirectXGB         Very Dense Fog (<0.5km n= 2697 diff=   2.7 pp  95% CI [   1.5,    3.8]
+   DirectRF          Very Dense Fog (<0.5km n= 2697 diff=   2.6 pp  95% CI [   1.3,    3.7]
+   DirectRF          Rain: Heavy (>7.6 mm/h n= 4351 diff=   0.0 pp  95% CI [   0.0,    0.0]
+   XGBoost           Rain: Heavy (>7.6 mm/h n= 4351 diff=  -5.9 pp  95% CI [  -6.6,   -5.2]

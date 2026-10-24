@@ -1,0 +1,67 @@
+Clear (V>50km)                   LinearRegression    0.5s
+Clear (V>50km)                   RandomForest       10.9s
+Clear (V>50km)                   XGBoost             1.3s
+Clear (V>50km)                   SVR                14.6s
+Clear (V>50km)                   MLP                14.2s
+Clear (V>50km)                   DirectLogReg        0.1s
+Clear (V>50km)                   DirectRF            1.3s
+Clear (V>50km)                   DirectXGB           0.9s
+Dense Fog (0.5-1km)              LinearRegression    0.1s
+Dense Fog (0.5-1km)              RandomForest        9.8s
+Dense Fog (0.5-1km)              XGBoost             1.0s
+Dense Fog (0.5-1km)              SVR                13.0s
+Dense Fog (0.5-1km)              MLP                10.6s
+Dense Fog (0.5-1km)              DirectLogReg        0.1s
+Dense Fog (0.5-1km)              DirectRF            1.1s
+Dense Fog (0.5-1km)              DirectXGB           0.8s
+Rain: Heavy (>7.6 mm/h)          LinearRegression    0.8s
+Rain: Heavy (>7.6 mm/h)          RandomForest        6.2s
+Rain: Heavy (>7.6 mm/h)          XGBoost             1.5s
+Rain: Heavy (>7.6 mm/h)          SVR                25.9s
+/home/claude/final_candidate/analysis/03_lowco_rerun_and_direct_clf.py:15: RuntimeWarning: overflow encountered in scalar power
+  ber={c:10.0**v for c,v in pred.items()}; passing=[c for c in FO if ber[c]<=1e-9]
+Rain: Heavy (>7.6 mm/h)          MLP                10.2s
+Rain: Heavy (>7.6 mm/h)          DirectLogReg        0.0s
+Rain: Heavy (>7.6 mm/h)          DirectRF            0.9s
+Rain: Heavy (>7.6 mm/h)          DirectXGB           0.7s
+Rain: Light (<2.5 mm/h)          LinearRegression    0.1s
+Rain: Light (<2.5 mm/h)          RandomForest       10.9s
+Rain: Light (<2.5 mm/h)          XGBoost             1.0s
+Rain: Light (<2.5 mm/h)          SVR                13.3s
+Rain: Light (<2.5 mm/h)          MLP                18.3s
+Rain: Light (<2.5 mm/h)          DirectLogReg        0.1s
+Rain: Light (<2.5 mm/h)          DirectRF            1.3s
+Rain: Light (<2.5 mm/h)          DirectXGB           0.9s
+Rain: Moderate (2.5-7.6 mm/h)    LinearRegression    0.1s
+Rain: Moderate (2.5-7.6 mm/h)    RandomForest       10.6s
+Rain: Moderate (2.5-7.6 mm/h)    XGBoost             1.0s
+Rain: Moderate (2.5-7.6 mm/h)    SVR                11.8s
+Rain: Moderate (2.5-7.6 mm/h)    MLP                16.4s
+Rain: Moderate (2.5-7.6 mm/h)    DirectLogReg        0.1s
+Rain: Moderate (2.5-7.6 mm/h)    DirectRF            1.4s
+Rain: Moderate (2.5-7.6 mm/h)    DirectXGB           0.8s
+Very Dense Fog (<0.5km)          LinearRegression    0.6s
+Very Dense Fog (<0.5km)          RandomForest        7.4s
+Very Dense Fog (<0.5km)          XGBoost             1.1s
+Very Dense Fog (<0.5km)          SVR                21.1s
+Very Dense Fog (<0.5km)          MLP                14.4s
+Very Dense Fog (<0.5km)          DirectLogReg        0.0s
+Very Dense Fog (<0.5km)          DirectRF            0.9s
+Very Dense Fog (<0.5km)          DirectXGB           0.3s
+Visibility Regime 1 (6-50km)     LinearRegression    0.2s
+Visibility Regime 1 (6-50km)     RandomForest       10.2s
+Visibility Regime 1 (6-50km)     XGBoost             0.9s
+Visibility Regime 1 (6-50km)     SVR                13.3s
+Visibility Regime 1 (6-50km)     MLP                22.9s
+Visibility Regime 1 (6-50km)     DirectLogReg        0.1s
+Visibility Regime 1 (6-50km)     DirectRF            1.2s
+Visibility Regime 1 (6-50km)     DirectXGB           0.8s
+Visibility Regime 2 (1-6km)      LinearRegression    0.1s
+Visibility Regime 2 (1-6km)      RandomForest       10.3s
+Visibility Regime 2 (1-6km)      XGBoost             0.9s
+Visibility Regime 2 (1-6km)      SVR                13.3s
+Visibility Regime 2 (1-6km)      MLP                10.8s
+Visibility Regime 2 (1-6km)      DirectLogReg        0.1s
+Visibility Regime 2 (1-6km)      DirectRF            1.3s
+Visibility Regime 2 (1-6km)      DirectXGB           1.0s
+DONE
